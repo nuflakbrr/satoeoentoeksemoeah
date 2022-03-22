@@ -64,7 +64,7 @@ export default function Navbar() {
                                                 <li>
                                                     <p className='block px-4 py-2 text-xs text-gray-500 border-b-2'>React Js</p>
                                                 </li>
-                                                {dropdownLinks.map((link, i) => (
+                                                {dropdownLinks.map((link) => (
                                                     <li key={link.text}>
                                                         <NavLink
                                                             to={link.to}
@@ -139,30 +139,24 @@ export default function Navbar() {
                                         <nav tabIndex='0' className='bg-white invisible rounded w-60 absolute left-0 top-full transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1'>
                                             <ul className='py-1'>
                                                 <li>
-                                                    <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
-                                                        Edit
-                                                    </NavLink>
+                                                    <p className='block px-4 py-2 text-xs text-gray-500 border-b-2'>React Js</p>
                                                 </li>
-                                                <li>
-                                                    <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
-                                                        Delete
-                                                    </NavLink>
-                                                </li>
-                                                <li>
-                                                    <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
-                                                        Reply
-                                                    </NavLink>
-                                                </li>
+                                                {dropdownLinks.map((link) => (
+                                                    <li key={link.text}>
+                                                        <NavLink
+                                                            to={link.to}
+                                                            className={`block px-4 py-2 text-sm ${location.pathname === link.to
+                                                                ? activeClass
+                                                                : inactiveClassMenu
+                                                                }`}
+                                                        >
+                                                            {link.text}
+                                                        </NavLink>
+                                                    </li>
+                                                ))}
                                             </ul>
                                         </nav>
                                     </div>
-                                    {/* <NavLink
-                                        to='/'
-                                        className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'
-                                        role='menuitem'
-                                    >
-                                        Home
-                                    </NavLink> */}
                                 </div>
                             </div>
                         )}
