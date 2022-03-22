@@ -14,6 +14,7 @@ export default function Navbar() {
 
     const activeClass = 'text-white bg-gray-800'
     const inactiveClass = 'text-gray-300 hover:text-white hover:bg-gray-800 transition duration-300 ease-in-out'
+    const inactiveClassMenu = 'text-gray-700 hover:bg-gray-100 hover:bg-gray-800 transition duration-300 ease-in-out'
 
     return (
         <nav>
@@ -48,31 +49,28 @@ export default function Navbar() {
                                             {link.text}
                                         </NavLink>
                                     ))}
-                                    <div>
-                                        <div className='group relative'>
-                                            <button className={`px-3 py-2 rounded-md text-sm font-medium ${inactiveClass}`}>Studi Kasus</button>
-                                            <nav tabIndex='0' className='border-2 bg-white invisible border-gray-800 rounded w-60 absolute left-0 top-full transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1'>
-                                                <ul className='py-1'>
-                                                    <li>
-                                                        <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
-                                                            Edit
-                                                        </NavLink>
-                                                    </li>
-                                                    <li>
-                                                        <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
-                                                            Delete
-                                                        </NavLink>
-                                                    </li>
-                                                    <li>
-                                                        <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
-                                                            Reply
-                                                        </NavLink>
-                                                    </li>
-                                                </ul>
-                                            </nav>
-                                        </div>
+                                    <div className='group relative'>
+                                        <button className={`px-3 py-2 rounded-md text-sm font-medium ${inactiveClass}`}>Studi Kasus</button>
+                                        <nav tabIndex='0' className='bg-white invisible rounded w-60 absolute left-0 top-full transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1'>
+                                            <ul className='py-1'>
+                                                <li>
+                                                    <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
+                                                        Edit
+                                                    </NavLink>
+                                                </li>
+                                                <li>
+                                                    <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
+                                                        Delete
+                                                    </NavLink>
+                                                </li>
+                                                <li>
+                                                    <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
+                                                        Reply
+                                                    </NavLink>
+                                                </li>
+                                            </ul>
+                                        </nav>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -114,19 +112,48 @@ export default function Navbar() {
                         </button>
                         {showMenu && (
                             <div className='origin-top-right absolute right-5 mt-10 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5'>
-                                <div
-                                    className='py-1 rounded-md bg-white shadow-xs'
-                                    role='menu'
-                                    aria-orientation='vertical'
-                                    aria-labelledby='user-menu'
-                                >
-                                    <NavLink
+                                <div className='py-1 rounded-md bg-white shadow-xs' role='menu' aria-orientation='vertical' aria-labelledby='user-menu'>
+                                    {links.map((link, i) => (
+                                        <NavLink
+                                            key={link.text}
+                                            to={link.to}
+                                            className={`block px-4 py-2 text-sm font-medium ${location.pathname === link.to
+                                                ? activeClass
+                                                : inactiveClassMenu
+                                                } ${i > 0 && 'mt-1'}`}
+                                        >
+                                            {link.text}
+                                        </NavLink>
+                                    ))}
+                                    <div className='group relative'>
+                                        <button className={`px-3 py-2 rounded-md text-sm font-medium ${inactiveClassMenu}`}>Studi Kasus</button>
+                                        <nav tabIndex='0' className='bg-white invisible rounded w-60 absolute left-0 top-full transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1'>
+                                            <ul className='py-1'>
+                                                <li>
+                                                    <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
+                                                        Edit
+                                                    </NavLink>
+                                                </li>
+                                                <li>
+                                                    <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
+                                                        Delete
+                                                    </NavLink>
+                                                </li>
+                                                <li>
+                                                    <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
+                                                        Reply
+                                                    </NavLink>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    {/* <NavLink
                                         to='/'
                                         className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'
                                         role='menuitem'
                                     >
                                         Home
-                                    </NavLink>
+                                    </NavLink> */}
                                 </div>
                             </div>
                         )}
