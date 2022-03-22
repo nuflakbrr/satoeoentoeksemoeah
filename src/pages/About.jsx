@@ -26,7 +26,7 @@ export default function About() {
                                 <p className='text-gray-500 sm:text-lg mb-6 md:mb-8'>
                                     <span className='bg-gray-700 p-1 rounded font-mono'>SATOEOENTOEKSEMOEAH</span> adalah sebuah Website yang berisikan tentang semua kumpulan studi kasus yang diberikan oleh <a href='https://smktelkom-mlg.sch.id' className='text-blue-500 hover:text-blue-600 active:text-blue-700 underline transition duration-100' rel='noopener noreferrer' target='_blank'>SMK Telkom Malang</a>.<br /><br />
 
-                                    Mengapa saya memilih nama <span className='bg-gray-700 p-1 rounded font-mono'>SATOEOENTOEKSEMOEAH</span>? Karena, nama tersebut saya ambil dari kalimat <i>Satoe Oentoek Semoea</i> dengan ejaan <i>Order Lama</i> yang memiliki arti <i>Satu Untuk Semua</i>. Hal tersebut sesuai dengan Website ini, satu Website yang memiliki banyak studi kasus yang bisa Anda nikmati.
+                                    Mengapa saya memilih nama <span className='bg-gray-700 p-1 rounded font-mono'>SATOEOENTOEKSEMOEAH</span>? Karena, nama tersebut saya ambil dari kalimat <i>Satoe Oentoek Semoea</i> dengan ejaan <i>Orde Lama</i> yang memiliki arti <i>Satu Untuk Semua</i>. Hal tersebut sesuai dengan Website ini, satu Website yang memiliki banyak studi kasus yang bisa Anda nikmati.
                                 </p>
 
                                 <h2 className='text-xl sm:text-2xl font-semibold text-center md:text-left mb-2 md:mb-4'>Tentang Naufal Akbar Nugroho.</h2>
