@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { BsInfoCircleFill, BsFillCheckCircleFill } from 'react-icons/bs'
 import { AiFillAlert } from 'react-icons/ai'
 
-import { Footer, Sidebar, SEO, Modal, Alert } from '../components'
+import { Footer, Sidebar, SEO, Modal, Alert, Chat } from '../components'
 
 export default function BMI() {
     const [popUpStack, setPopUpStack] = useState([])
@@ -40,7 +40,8 @@ export default function BMI() {
             <div className='dark:bg-gray-900 min-h-screen lg:overflow-x-auto overflow-x-hidden'>
                 {popUpStack}
                 <Sidebar />
-                <div className='relative md:ml-64 mt-10'>
+                <Chat text='Selamat datang di Kalkulator BMI! Kalkulator BMI adalah sebuah alat bantu hitung untuk menentukan apakah anda memiliki berat badan yang ideal atau bahkan obesitas. Selamat mencoba!' />
+                <div className='relative md:ml-64'>
                     <section className='text-gray-300'>
                         <div className='container flex flex-col px-5 py-10 mx-auto lg:items-center'>
                             <div className='border-2 p-5 rounded-lg lg:w-2/4 md:w-1/2 w-full'>
