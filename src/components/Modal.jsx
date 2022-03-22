@@ -3,7 +3,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 
 export default function Modal({ title, desc, onClose }) {
     return (
-        <div className='fixed bg-gray-400/60 w-full h-full z-10'>
+        <div className='fixed bg-gray-400/60 w-full h-full z-20'>
             <div className='flex justify-center items-center my-20'>
                 <div className='p-8 bg-white shadow-md hover:shodow-lg rounded-2xl max-w-xl'>
                     <div className='flex items-center justify-between'>
