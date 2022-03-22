@@ -23,7 +23,7 @@ export default function About() {
                                 <h1 className='text-2xl sm:text-3xl font-bold text-center md:text-left mb-4 md:mb-6'>Tentang SATOEOENTOEKSEMOEAH.</h1>
 
                                 <p className='text-gray-500 sm:text-lg mb-6 md:mb-8'>
-                                    <span className='bg-gray-700 p-1 rounded font-mono'>SATOEOENTOEKSEMOEAH</span> adalah sebuah Website yang berisikan tentang semua kumpulan studi kasus yang diberikan oleh <a href='https://smktelkom-mlg.sch.id' className='text-blue-500 hover:text-blue-600 active:text-blue-700 underline transition duration-100'>SMK Telkom Malang</a>.<br /><br />
+                                    <span className='bg-gray-700 p-1 rounded font-mono'>SATOEOENTOEKSEMOEAH</span> adalah sebuah Website yang berisikan tentang semua kumpulan studi kasus yang diberikan oleh <a href='https://smktelkom-mlg.sch.id' className='text-blue-500 hover:text-blue-600 active:text-blue-700 underline transition duration-100' rel='noopener noreferrer' target='_blank'>SMK Telkom Malang</a>.<br /><br />
 
                                     Mengapa saya memilih nama <span className='bg-gray-700 p-1 rounded font-mono'>SATOEOENTOEKSEMOEAH</span>? Karena, nama tersebut saya ambil dari kalimat <i>Satoe Oentoek Semoea</i> dengan ejaan <i>Order Lama</i> yang memiliki arti <i>Satu Untuk Semua</i>. Hal tersebut sesuai dengan Website ini, satu Website yang memiliki banyak studi kasus yang bisa Anda nikmati.
                                 </p>
