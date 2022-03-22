@@ -88,7 +88,7 @@ export default function Navbar() {
                                 <div className='py-1 rounded-md bg-white shadow-xs' role='menu' aria-orientation='vertical' aria-labelledby='user-menu'>
                                     <NavLink to='/' className={`block px-4 py-2 text-sm font-medium ${activeClassMob('/')}`}>Beranda</NavLink>
                                     <NavLink to='/about' className={`block px-4 py-2 text-sm font-medium ${activeClassMob('/about')}`}>Tentang</NavLink>
-                                    <NavLink to='/bmi' className={`px-3 py-2 rounded-md text-sm font-medium ${activeClassMob('/bmi')} ml-4`}>Studi Kasus</NavLink>
+                                    <NavLink to='/bmi' className={`block px-4 py-2 text-sm font-medium ${activeClassMob('/bmi')}`}>Studi Kasus</NavLink>
                                 </div>
                             </div>
                         )}
