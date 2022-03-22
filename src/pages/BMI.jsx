@@ -36,7 +36,7 @@ export default function BMI() {
 
     return (
         <>
-            <SEO />
+            <SEO title='Kalkulator BMI - SATOE OENTOEK SEMOEAH' desc='Salah satu studi kasus alat hitung BMI oleh Naufal Akbar Nugroho' keyword='BMI, Kalkulator BMI' />
             <div className='dark:bg-gray-900 min-h-screen lg:overflow-x-auto overflow-x-hidden'>
                 {popUpStack}
                 <Navbar />
