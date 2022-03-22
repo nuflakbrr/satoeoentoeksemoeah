@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <>
             <SEO title='SATOE OENTOEK SEMOEAH - Naufal Akbar Nugroho' desc='Selamat Datang di Website SATOEOENTOEKSEMOEAH. Di Website ini, Anda dapat menikmati beberapa studi kasus yang sudah saya kerjakan. Semua studi kasus didalam Website ini adalah semua studi kasus yang saya dapat dari sekolah.' />
-            <div className='dark:bg-gray-900 min-h-screen'>
+            <div className='dark:bg-gray-900 min-h-screen lg:overflow-x-auto overflow-x-hidden'>
                 <Navbar />
                 <section className='text-gray-300'>
                     <div className='container flex flex-col px-5 py-24 mx-auto lg:items-center'>
