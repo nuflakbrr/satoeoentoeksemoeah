@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import { Home } from './pages'
+import { About, Home } from './pages'
 
 function App() {
   const [dark, setDark] = useState()
@@ -10,6 +10,7 @@ function App() {
     <div className={dark ? '' : 'dark'}>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   )
