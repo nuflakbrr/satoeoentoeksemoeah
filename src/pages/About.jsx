@@ -3,6 +3,7 @@ import { BiLinkExternal } from 'react-icons/bi'
 
 import { Footer, Navbar, SEO } from '../components'
 import Me from '../assets/images/Me.png'
+import Laptop from '../assets/images/laptop.avif'
 
 export default function About() {
     return (
@@ -15,7 +16,7 @@ export default function About() {
                         <div className='grid md:grid-cols-2 gap-8 lg:gap-12'>
                             <div>
                                 <div className='h-64 md:h-auto bg-gray-100 overflow-hidden rounded-lg shadow-lg'>
-                                    <img src='https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600&h=750' loading='lazy' alt='Photo by Martin Sanchez' className='w-full h-full object-cover object-center' />
+                                    <img src={Laptop} loading='lazy' alt='Laptop' className='w-full h-full object-cover object-center' />
                                 </div>
                             </div>
 
