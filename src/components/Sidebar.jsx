@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { BiMenuAltLeft } from 'react-icons/bi'
 import { BsFillInfoCircleFill, BsCalculatorFill } from 'react-icons/bs'
 import { AiOutlineClose } from 'react-icons/ai'
 import { FaMoneyBillWave, FaHome } from 'react-icons/fa'
@@ -23,8 +22,20 @@ export default function Sidebar() {
                         SATOEOENTOEKSEMOEAH
                     </Link>
 
-                    <button className='cursor-pointer text-white md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent' type='button' onClick={() => setCollapseShow('bg-gray-900 m-2 py-3 px-6')}>
-                        <BiMenuAltLeft />
+                    <button className='cursor-pointer text-white focus:text-white md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent' type='button' onClick={() => setCollapseShow('bg-gray-900 m-2 py-3 px-6')}>
+                        <svg
+                            className='block h-6 w-6'
+                            stroke='currentColor'
+                            fill='none'
+                            viewBox='0 0 24 24'
+                        >
+                            <path
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                strokeWidth='2'
+                                d='M4 6h16M4 12h16M4 18h16'
+                            />
+                        </svg>
                     </button>
 
                     {/* Collapse */}
