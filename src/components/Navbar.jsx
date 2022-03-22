@@ -43,20 +43,7 @@ export default function Navbar() {
                                 <div className='ml-10 flex items-baseline space-x-4'>
                                     <NavLink to='/' className={`px-3 py-2 rounded-md text-sm font-medium ${activeClasses('/')} ml-4`}>Beranda</NavLink>
                                     <NavLink to='/about' className={`px-3 py-2 rounded-md text-sm font-medium ${activeClasses('/about')} ml-4`}>Tentang</NavLink>
-
-                                    <div className='group relative'>
-                                        <button className={`px-3 py-2 rounded-md text-sm font-medium ${inactiveClass}`}>Studi Kasus</button>
-                                        <nav tabIndex='0' className='bg-white invisible rounded w-60 absolute left-0 top-full transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1'>
-                                            <ul className='py-1'>
-                                                <li>
-                                                    <p className='block px-4 py-2 text-xs text-gray-500 border-b-2'>React Js</p>
-                                                </li>
-                                                <li>
-                                                    <NavLink to='/bmi' className={`block px-4 py-2 text-sm ${activeClassMob('/bmi')}`}>BMI</NavLink>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
+                                    <NavLink to='/bmi' className={`px-3 py-2 rounded-md text-sm font-medium ${activeClasses('/bmi')} ml-4`}>Studi Kasus</NavLink>
                                 </div>
                             </div>
                         </div>
@@ -101,20 +88,7 @@ export default function Navbar() {
                                 <div className='py-1 rounded-md bg-white shadow-xs' role='menu' aria-orientation='vertical' aria-labelledby='user-menu'>
                                     <NavLink to='/' className={`block px-4 py-2 text-sm font-medium ${activeClassMob('/')}`}>Beranda</NavLink>
                                     <NavLink to='/about' className={`block px-4 py-2 text-sm font-medium ${activeClassMob('/about')}`}>Tentang</NavLink>
-
-                                    <div className='group relative'>
-                                        <button className={`px-3 py-2 rounded-md text-sm font-medium ${inactiveClassMenu}`}>Studi Kasus</button>
-                                        <nav tabIndex='0' className='bg-white invisible rounded w-60 absolute left-0 top-full transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1'>
-                                            <ul className='py-1'>
-                                                <li>
-                                                    <p className='block px-4 py-2 text-xs text-gray-500 border-b-2'>React Js</p>
-                                                </li>
-                                                <li>
-                                                    <NavLink to='/bmi' className={`block px-4 py-2 text-sm ${activeClassMob('/bmi')}`}>BMI</NavLink>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
+                                    <NavLink to='/bmi' className={`px-3 py-2 rounded-md text-sm font-medium ${activeClassMob('/bmi')} ml-4`}>Studi Kasus</NavLink>
                                 </div>
                             </div>
                         )}
