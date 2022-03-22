@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaExternalLinkAlt } from 'react-icons/fa'
+import { BiLinkExternal } from 'react-icons/bi'
 
 import { Footer, Navbar, SEO } from '../components'
 import Me from '../assets/images/Me.png'
@@ -28,7 +28,7 @@ export default function About() {
                                     Mengapa saya memilih nama <span className='bg-gray-700 p-1 rounded font-mono'>SATOEOENTOEKSEMOEAH</span>? Karena, nama tersebut saya ambil dari kalimat <i>Satoe Oentoek Semoea</i> dengan ejaan <i>Order Lama</i> yang memiliki arti <i>Satu Untuk Semua</i>. Hal tersebut sesuai dengan Website ini, satu Website yang memiliki banyak studi kasus yang bisa Anda nikmati.
                                 </p>
 
-                                <h2 className='text-xl sm:text-2xl font-semibold text-center md:text-left mb-2 md:mb-4'>Tentang Naufal Akbar Nugroho</h2>
+                                <h2 className='text-xl sm:text-2xl font-semibold text-center md:text-left mb-2 md:mb-4'>Tentang Naufal Akbar Nugroho.</h2>
 
                                 <div className='flex flex-col p-5'>
                                     <div>
