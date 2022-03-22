@@ -29,7 +29,7 @@ export default function BMI() {
                     <div className='container flex flex-col px-5 py-24 mx-auto lg:items-center'>
                         <div className='border-2 p-5 rounded-lg lg:w-2/4 md:w-1/2 w-full'>
                             <div className='flex justify-center items-center border-b'>
-                                <h1 className='font-bold text-xl'>Kalkulator BMI</h1>
+                                <h1 className='font-bold text-xl mb-2'>Kalkulator BMI</h1>
                                 <button type='button' onClick={openModal} className='bg-blue-800 p-1.5 mb-2 rounded-lg ml-2'><BsInfoCircleFill /></button>
                             </div>
                             <div>
