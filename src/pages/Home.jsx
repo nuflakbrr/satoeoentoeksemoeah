@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Footer, Navbar, SEO } from '../components'
 
 export default function Home() {
