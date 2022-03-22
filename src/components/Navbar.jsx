@@ -12,6 +12,12 @@ export default function Navbar() {
         { text: 'Tentang', to: '/about' },
     ]
 
+    const dropdownLinks = [
+        { text: 'BMI', to: '/bmi' },
+        { text: 'CIcilan Bank', to: '/cicilan' },
+        { text: 'Pajak PPN', to: '/pajak' },
+    ]
+
     const activeClass = 'text-white bg-gray-800'
     const inactiveClass = 'text-gray-300 hover:text-white hover:bg-gray-800 transition duration-300 ease-in-out'
     const inactiveClassMenu = 'text-gray-700 hover:bg-gray-100 hover:bg-gray-800 transition duration-300 ease-in-out'
@@ -22,16 +28,18 @@ export default function Navbar() {
                 <div className='flex items-center justify-between py-10'>
                     <div className='flex items-center'>
                         {/* Profile dropdown */}
-                        <div className='ml-3 relative'>
-                            <div>
-                                <span className='sr-only'>Open user menu</span>
-                                <img
-                                    className='h-10 w-10 rounded-full border-2'
-                                    src={Me}
-                                    alt='Naufal Akbar Nugroho'
-                                />
+                        <NavLink to='/'>
+                            <div className='ml-3 relative'>
+                                <div>
+                                    <span className='sr-only'>Open user menu</span>
+                                    <img
+                                        className='h-10 w-10 rounded-full border-2'
+                                        src={Me}
+                                        alt='Naufal Akbar Nugroho'
+                                    />
+                                </div>
                             </div>
-                        </div>
+                        </NavLink>
                     </div>
                     <div className='hidden md:block'>
                         <div className='ml-4 flex items-center md:ml-6'>
@@ -54,20 +62,21 @@ export default function Navbar() {
                                         <nav tabIndex='0' className='bg-white invisible rounded w-60 absolute left-0 top-full transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1'>
                                             <ul className='py-1'>
                                                 <li>
-                                                    <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
-                                                        Edit
-                                                    </NavLink>
+                                                    <p className='block px-4 py-2 text-xs text-gray-500 border-b-2'>React Js</p>
                                                 </li>
-                                                <li>
-                                                    <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
-                                                        Delete
-                                                    </NavLink>
-                                                </li>
-                                                <li>
-                                                    <NavLink to='#' className='block px-4 py-2 hover:bg-gray-100'>
-                                                        Reply
-                                                    </NavLink>
-                                                </li>
+                                                {dropdownLinks.map((link, i) => (
+                                                    <li key={link.text}>
+                                                        <NavLink
+                                                            to={link.to}
+                                                            className={`block px-4 py-2 text-sm ${location.pathname === link.to
+                                                                ? activeClass
+                                                                : inactiveClassMenu
+                                                                }`}
+                                                        >
+                                                            {link.text}
+                                                        </NavLink>
+                                                    </li>
+                                                ))}
                                             </ul>
                                         </nav>
                                     </div>
