@@ -65,7 +65,7 @@ export default function Sidebar() {
                             </li>
 
                             <li className='items-center'>
-                                <Link className={activeClassses('/pajak')} to='/'>
+                                <Link className={activeClassses('/pajak')} to='/pajak'>
                                     <FaMoneyBillWave className='mr-2 text-lg' /> Pajak PPN
                                 </Link>
                             </li>
