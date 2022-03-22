@@ -36,7 +36,7 @@ export default function BMI() {
 
     return (
         <>
-            <SEO title='Kalkulator BMI - SATOE OENTOEK SEMOEAH' desc='Salah satu studi kasus alat hitung BMI oleh Naufal Akbar Nugroho' keyword='BMI, Kalkulator BMI' />
+            <SEO title='Kalkulator BMI - SATOE OENTOEK SEMOEAH' desc='Salah satu studi kasus alat hitung BMI oleh Naufal Akbar Nugroho' keyword='BMI, Kalkulator BMI' url='https://satoeoentoeksemoeah.vercel.app/bmi' />
             <div className='dark:bg-gray-900 min-h-screen lg:overflow-x-auto overflow-x-hidden'>
                 {popUpStack}
                 <Sidebar />
