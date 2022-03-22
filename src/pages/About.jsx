@@ -7,7 +7,7 @@ import Me from '../assets/images/Me.png'
 export default function About() {
     return (
         <>
-            <SEO title='Tentang - SATOE OENTOEK SEMOEAH' desc='' />
+            <SEO title='Tentang - SATOE OENTOEK SEMOEAH' desc='SATOEOENTOEKSEMOEAH adalah sebuah Website yang berisikan tentang semua kumpulan studi kasus yang diberikan oleh SMK Telkom Malang.' />
             <div className='dark:bg-gray-900 min-h-screen lg:overflow-x-auto overflow-x-hidden'>
                 <Navbar />
                 <div className='text-gray-300 y-6 sm:py-8 lg:py-12'>
