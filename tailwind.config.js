@@ -9,4 +9,7 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  variants: {
+    scrollbar: ['dark']
+  }
 }
