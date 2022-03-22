@@ -71,10 +71,11 @@ export default function BMI() {
                                 </div>
                                 <div className='mt-2'>
                                     {
-                                        bmi < 18.5 ? <Alert color='bg-red-500' icons={<AiFillAlert />} result='Kekurangan Berat Badan (Kurus)' />
-                                            : bmi < 25 ? <Alert color='bg-green-500' icons={<BsFillCheckCircleFill />} result='Berat Badan Normal' />
-                                                : bmi < 30 ? <Alert color='bg-yellow-500' icons={<AiFillAlert />} result='Kelebihan Berat Badan (Gemuk)' />
-                                                    : <Alert color='bg-red-500' icons={<AiFillAlert />} result='Obesitas' />
+                                        ((bmi > 0) && (bmi <= 18.5)) ? <Alert color='bg-red-500' icons={<AiFillAlert />} result='Kekurangan Berat Badan (Kurus)' />
+                                            : ((bmi >= 18.5) && (bmi <= 25)) ? <Alert color='bg-green-500' icons={<BsFillCheckCircleFill />} result='Berat Badan Normal' />
+                                                : ((bmi >= 25) && (bmi <= 30)) ? <Alert color='bg-yellow-500' icons={<AiFillAlert />} result='Kelebihan Berat Badan (Gemuk)' />
+                                                    : bmi > 30 ? <Alert color='bg-red-500' icons={<AiFillAlert />} result='Obesitas' />
+                                                        : <Alert color='bg-blue-500' icons={<BsInfoCircleFill />} result='Silahkan masukkan nominal' />
                                     }
                                 </div>
                             </div>
