@@ -1,26 +1,22 @@
 import React, { useState } from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import Me from '../assets/images/Me.png'
 
 export default function Navbar() {
     const [showMenu, setShowMenu] = useState(false)
-    const location = useLocation()
-
-    const links = [
-        { text: 'Beranda', to: '/' },
-        { text: 'Tentang', to: '/about' },
-    ]
-
-    const dropdownLinks = [
-        { text: 'BMI', to: '/bmi' },
-        { text: 'CIcilan Bank', to: '/cicilan' },
-        { text: 'Pajak PPN', to: '/pajak' },
-    ]
 
     const activeClass = 'text-white bg-gray-800'
     const inactiveClass = 'text-gray-300 hover:text-white hover:bg-gray-800 transition duration-300 ease-in-out'
     const inactiveClassMenu = 'text-gray-700 hover:bg-gray-100 hover:bg-gray-800 transition duration-300 ease-in-out'
+
+    const activeClasses = (path) => {
+        return window.location.pathname === path ? activeClass : inactiveClass
+    }
+
+    const activeClassMob = (path) => {
+        return window.location.pathname === path ? activeClass : inactiveClassMenu
+    }
 
     return (
         <nav>
@@ -45,18 +41,9 @@ export default function Navbar() {
                         <div className='ml-4 flex items-center md:ml-6'>
                             <div className='hidden md:block'>
                                 <div className='ml-10 flex items-baseline space-x-4'>
-                                    {links.map((link, i) => (
-                                        <NavLink
-                                            key={link.text}
-                                            to={link.to}
-                                            className={`px-3 py-2 rounded-md text-sm font-medium ${location.pathname === link.to
-                                                ? activeClass
-                                                : inactiveClass
-                                                } ${i > 0 && 'ml-4'}`}
-                                        >
-                                            {link.text}
-                                        </NavLink>
-                                    ))}
+                                    <NavLink to='/' className={`px-3 py-2 rounded-md text-sm font-medium ${activeClasses('/')} ml-4`}>Beranda</NavLink>
+                                    <NavLink to='/about' className={`px-3 py-2 rounded-md text-sm font-medium ${activeClasses('/about')} ml-4`}>Tentang</NavLink>
+
                                     <div className='group relative'>
                                         <button className={`px-3 py-2 rounded-md text-sm font-medium ${inactiveClass}`}>Studi Kasus</button>
                                         <nav tabIndex='0' className='bg-white invisible rounded w-60 absolute left-0 top-full transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1'>
@@ -64,19 +51,9 @@ export default function Navbar() {
                                                 <li>
                                                     <p className='block px-4 py-2 text-xs text-gray-500 border-b-2'>React Js</p>
                                                 </li>
-                                                {dropdownLinks.map((link) => (
-                                                    <li key={link.text}>
-                                                        <NavLink
-                                                            to={link.to}
-                                                            className={`block px-4 py-2 text-sm ${location.pathname === link.to
-                                                                ? activeClass
-                                                                : inactiveClassMenu
-                                                                }`}
-                                                        >
-                                                            {link.text}
-                                                        </NavLink>
-                                                    </li>
-                                                ))}
+                                                <li>
+                                                    <NavLink to='/bmi' className={`block px-4 py-2 text-sm ${activeClassMob('/bmi')}`}>BMI</NavLink>
+                                                </li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -122,18 +99,9 @@ export default function Navbar() {
                         {showMenu && (
                             <div className='origin-top-right absolute right-5 mt-10 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5'>
                                 <div className='py-1 rounded-md bg-white shadow-xs' role='menu' aria-orientation='vertical' aria-labelledby='user-menu'>
-                                    {links.map((link, i) => (
-                                        <NavLink
-                                            key={link.text}
-                                            to={link.to}
-                                            className={`block px-4 py-2 text-sm font-medium ${location.pathname === link.to
-                                                ? activeClass
-                                                : inactiveClassMenu
-                                                } ${i > 0 && 'mt-1'}`}
-                                        >
-                                            {link.text}
-                                        </NavLink>
-                                    ))}
+                                    <NavLink to='/' className={`block px-4 py-2 text-sm font-medium ${activeClassMob('/')}`}>Beranda</NavLink>
+                                    <NavLink to='/about' className={`block px-4 py-2 text-sm font-medium ${activeClassMob('/about')}`}>Tentang</NavLink>
+
                                     <div className='group relative'>
                                         <button className={`px-3 py-2 rounded-md text-sm font-medium ${inactiveClassMenu}`}>Studi Kasus</button>
                                         <nav tabIndex='0' className='bg-white invisible rounded w-60 absolute left-0 top-full transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1'>
@@ -141,19 +109,9 @@ export default function Navbar() {
                                                 <li>
                                                     <p className='block px-4 py-2 text-xs text-gray-500 border-b-2'>React Js</p>
                                                 </li>
-                                                {dropdownLinks.map((link) => (
-                                                    <li key={link.text}>
-                                                        <NavLink
-                                                            to={link.to}
-                                                            className={`block px-4 py-2 text-sm ${location.pathname === link.to
-                                                                ? activeClass
-                                                                : inactiveClassMenu
-                                                                }`}
-                                                        >
-                                                            {link.text}
-                                                        </NavLink>
-                                                    </li>
-                                                ))}
+                                                <li>
+                                                    <NavLink to='/bmi' className={`block px-4 py-2 text-sm ${activeClassMob('/bmi')}`}>BMI</NavLink>
+                                                </li>
                                             </ul>
                                         </nav>
                                     </div>
