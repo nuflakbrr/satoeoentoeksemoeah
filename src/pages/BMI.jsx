@@ -41,7 +41,7 @@ export default function BMI() {
                 {popUpStack}
                 <Navbar />
                 <section className='text-gray-300'>
-                    <div className='container flex flex-col px-5 py-20 mx-auto lg:items-center'>
+                    <div className='container flex flex-col px-5 py-10 mx-auto lg:items-center'>
                         <div className='border-2 p-5 rounded-lg lg:w-2/4 md:w-1/2 w-full'>
                             <div className='flex justify-center items-center border-b'>
                                 <h1 className='font-bold text-xl mb-2'>Kalkulator BMI</h1>
