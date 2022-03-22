@@ -35,7 +35,7 @@ export default function About() {
                                         <div className='flex items-end justify-end mb-3'>
                                             <div className='flex flex-col md:text-md text-sm max-w-md mx-2 items-center'>
                                                 <div>
-                                                    <span className='px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-700 text-white'>Saya adalah seorang siswa SMK Telkom Malang yang mengambil bidang studi jurusan RPL (Rekayasa Perangkat Lunak). Hobi saya adalah bermain video game, membuat website dengan ReactJs. Saya juga suka membuat kontribusi ke sumber terbuka terkait informasi teknologi!</span>
+                                                    <span className='px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-700 text-white'>Saya adalah seorang siswa SMK Telkom Malang yang mengambil bidang studi jurusan RPL (Rekayasa Perangkat Lunak). Hobi saya adalah bermain video game, membuat website dengan ReactJs. Saya juga tertarik untuk membuat kontribusi ke sumber terbuka terkait informasi teknologi!</span>
                                                 </div>
                                             </div>
                                             <img src={Me} alt='Naufal Akbar Nugroho' className='md:w-18 md:h-18 w-16 h-16 rounded-full' />
@@ -43,7 +43,7 @@ export default function About() {
                                         <div className='flex items-end justify-end'>
                                             <div className='flex flex-col md:text-md text-sm max-w-md mx-2 items-center'>
                                                 <div>
-                                                    <span className='px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-700 text-white'>Anda dapat berkunjung ke Website saya di <a href="https://naufalakbar.me" className='underline' rel='noopener noreferrer' target='_blank'>naufalakbar.me</a>, Terimakasih!</span>
+                                                    <span className='px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-700 text-white'>Anda dapat mengunjungi Website saya di <a href="https://naufalakbar.me" className='underline' rel='noopener noreferrer' target='_blank'>naufalakbar.me</a>, Terimakasih!</span>
                                                 </div>
                                             </div>
                                             <img src={Me} alt='Naufal Akbar Nugroho' className='md:w-18 md:h-18 w-16 h-16 rounded-full' />
