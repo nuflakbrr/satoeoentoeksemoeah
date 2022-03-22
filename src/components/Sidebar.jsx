@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BiMenuAltLeft } from 'react-icons/bi'
-import { BsFillInfoCircleFill } from 'react-icons/bs'
-import { AiOutlineClose, AiOutlineDashboard } from 'react-icons/ai'
+import { BsFillInfoCircleFill, BsCalculatorFill } from 'react-icons/bs'
+import { AiOutlineClose } from 'react-icons/ai'
 import { FaMoneyBillWave, FaHome } from 'react-icons/fa'
 
 export default function Sidebar() {
@@ -54,7 +54,7 @@ export default function Sidebar() {
                         <ul className='md:flex-col md:min-w-full flex flex-col list-none'>
                             <li className='items-center'>
                                 <Link className={activeClassses('/bmi')} to='/bmi'>
-                                    <AiOutlineDashboard className='mr-2 text-lg' /> BMI
+                                    <BsCalculatorFill className='mr-2 text-lg' /> BMI
                                 </Link>
                             </li>
 
