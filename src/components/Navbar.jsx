@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
-import Me from '../assets/images/me.png'
+import Me from '../assets/images/Me.png'
 
 export default function Navbar() {
     const [showMenu, setShowMenu] = useState(false)
