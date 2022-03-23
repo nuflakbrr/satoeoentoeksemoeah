@@ -55,7 +55,7 @@ export default function BMI() {
                                         <input type='text' onChange={(e) => setMass(e.target.value)} id='weight' value={mass} className='w-full flex-1 bg-gray-white text-gray-800 placeholder-gray-400 border border-gray-300 focus:ring ring-blue-300 dark:ring-blue-500 rounded outline-none transition duration-100 px-3 py-2' required />
                                     </div>
                                     <div className='mt-2 flex flex-col'>
-                                        <label htmlFor='Berat Badan' className='mb-2'>Tinggi Badan (ex: 1.7)</label>
+                                        <label htmlFor='Tinggi Badan' className='mb-2'>Tinggi Badan (ex: 1.7)</label>
                                         <input type='text' onChange={(e) => setHeight(e.target.value)} id='height' value={height} className='w-full flex-1 bg-gray-white text-gray-800 placeholder-gray-400 border border-gray-300 focus:ring ring-blue-300 dark:ring-blue-500 rounded outline-none transition duration-100 px-3 py-2' />
                                     </div>
                                     <div className='mt-2 flex flex-col justify-end items-end'>
