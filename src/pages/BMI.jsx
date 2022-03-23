@@ -47,7 +47,7 @@ export default function BMI() {
                             <div className='border-2 p-5 rounded-lg lg:w-2/4 md:w-1/2 w-full'>
                                 <div className='flex justify-center items-center border-b'>
                                     <h1 className='font-bold text-xl mb-2'>Kalkulator BMI</h1>
-                                    <button type='button' onClick={openModal} className='bg-blue-800 p-1.5 mb-2 rounded-lg ml-2'><BsInfoCircleFill /></button>
+                                    <button type='button' onClick={openModal} className='bg-blue-700 hover:bg-blue-800 transition duration-500 ease-in-out transform p-1.5 mb-2 rounded-lg ml-2'><BsInfoCircleFill /></button>
                                 </div>
                                 <form onSubmit={calculate}>
                                     <div className='mt-2 flex flex-col'>
@@ -59,7 +59,7 @@ export default function BMI() {
                                         <input type='text' onChange={(e) => setHeight(e.target.value)} id='height' value={height} className='w-full flex-1 bg-gray-white text-gray-800 placeholder-gray-400 border border-gray-300 focus:ring ring-blue-300 dark:ring-blue-500 rounded outline-none transition duration-100 px-3 py-2' />
                                     </div>
                                     <div className='mt-2 flex flex-col justify-end items-end'>
-                                        <button type='submit' className='flex items-center px-5 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-blue-800 rounded-lg hover:bg-blue-700 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2'>
+                                        <button type='submit' className='flex items-center px-5 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-blue-700 rounded-lg hover:bg-blue-800 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2'>
                                             Hitung BMI
                                         </button>
                                     </div>
@@ -75,7 +75,7 @@ export default function BMI() {
                                             : ((bmi >= 18.5) && (bmi <= 25)) ? <Alert color='bg-green-500' icons={<BsFillCheckCircleFill />} result='Berat Badan Normal' />
                                                 : ((bmi >= 25) && (bmi <= 30)) ? <Alert color='bg-yellow-500' icons={<AiFillAlert />} result='Kelebihan Berat Badan (Gemuk)' />
                                                     : bmi > 30 ? <Alert color='bg-red-500' icons={<AiFillAlert />} result='Obesitas' />
-                                                        : <Alert color='bg-blue-500' icons={<BsInfoCircleFill />} result='Silahkan masukkan nominal' />
+                                                        : <Alert color='bg-blue-700' icons={<BsInfoCircleFill />} result='Silahkan masukkan nominal' />
                                     }
                                 </div>
                             </div>
