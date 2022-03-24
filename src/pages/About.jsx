@@ -1,5 +1,4 @@
 import React from 'react'
-import { BiLinkExternal } from 'react-icons/bi'
 
 import { Footer, Navbar, SEO } from '../components'
 import Me from '../assets/images/Me.png'
