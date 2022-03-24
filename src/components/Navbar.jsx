@@ -18,6 +18,12 @@ export default function Navbar() {
         return window.location.pathname === path ? activeClass : inactiveClassMenu
     }
 
+    const links = [
+        { path: '/', name: 'Beranda' },
+        { path: '/about', name: 'Tentang' },
+        { path: '/bmi', name: 'Studi Kasus' },
+    ]
+
     return (
         <nav>
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -41,9 +47,9 @@ export default function Navbar() {
                         <div className='ml-4 flex items-center md:ml-6'>
                             <div className='hidden md:block'>
                                 <div className='ml-10 flex items-baseline space-x-4'>
-                                    <NavLink to='/' className={`px-3 py-2 rounded-md text-sm font-medium ${activeClasses('/')} ml-4`}>Beranda</NavLink>
-                                    <NavLink to='/about' className={`px-3 py-2 rounded-md text-sm font-medium ${activeClasses('/about')} ml-4`}>Tentang</NavLink>
-                                    <NavLink to='/bmi' className={`px-3 py-2 rounded-md text-sm font-medium ${activeClasses('/bmi')} ml-4`}>Studi Kasus</NavLink>
+                                    {links.map((link, index) => (
+                                        <NavLink key={index} className={`px-3 py-2 rounded-md text-sm font-medium ${activeClasses(link.path)}`} to={link.path}>{link.name}</NavLink>
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -86,9 +92,9 @@ export default function Navbar() {
                         {showMenu && (
                             <div className='origin-top-right absolute right-5 mt-10 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5'>
                                 <div className='py-1 rounded-md bg-white shadow-xs' role='menu' aria-orientation='vertical' aria-labelledby='user-menu'>
-                                    <NavLink to='/' className={`block px-4 py-2 text-sm font-medium ${activeClassMob('/')}`}>Beranda</NavLink>
-                                    <NavLink to='/about' className={`block px-4 py-2 text-sm font-medium ${activeClassMob('/about')}`}>Tentang</NavLink>
-                                    <NavLink to='/bmi' className={`block px-4 py-2 text-sm font-medium ${activeClassMob('/bmi')}`}>Studi Kasus</NavLink>
+                                    {links.map((link, index) => (
+                                        <NavLink key={index} className={`block px-4 py-2 text-sm font-medium ${activeClassMob(link.path)}`} to={link.path}>{link.name}</NavLink>
+                                    ))}
                                 </div>
                             </div>
                         )}
