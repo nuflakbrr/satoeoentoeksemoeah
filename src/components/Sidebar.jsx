@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { BsFillInfoCircleFill, BsCalculatorFill } from 'react-icons/bs'
 import { AiOutlineClose } from 'react-icons/ai'
 import { FaMoneyBillWave, FaHome } from 'react-icons/fa'
@@ -14,13 +14,19 @@ export default function Sidebar() {
         return window.location.pathname === path ? activeClass : inActiveClass
     }
 
+    const links = [
+        { path: '/bmi', name: 'BMI', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
+        { path: '/cicilan', name: 'Cicilan Bank', icon: <FaMoneyBillWave className='mr-2 text-lg' /> },
+        { path: '/pajak', name: 'PPN', icon: <FaMoneyBillWave className='mr-2 text-lg' /> },
+    ]
+
     return (
         <>
             <nav className='md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-gray-900 flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6'>
                 <div className='md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto'>
-                    <Link className='md:block text-left md:pb-2 text-white mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0' to='/'>
+                    <NavLink className='md:block text-left md:pb-2 text-white mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0' to='/'>
                         SATOEOENTOEKSEMOEAH
-                    </Link>
+                    </NavLink>
 
                     <button className='cursor-pointer text-white focus:text-white md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent' type='button' onClick={() => setCollapseShow('bg-gray-900 m-2 py-3 px-6')}>
                         <svg
@@ -45,9 +51,9 @@ export default function Sidebar() {
                         <div className='md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-blueGray-200'>
                             <div className='flex flex-wrap'>
                                 <div className='w-6/12'>
-                                    <Link className='md:block text-left text-white md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0' to='/'>
+                                    <NavLink className='md:block text-left text-white md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0' to='/'>
                                         SATOEOENTOEKSEMOEAH
-                                    </Link>
+                                    </NavLink>
                                 </div>
                                 <div className='w-6/12 flex justify-end'>
                                     <button type='button' className='cursor-pointer text-white md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent' onClick={() => setCollapseShow('hidden')}>
@@ -63,23 +69,14 @@ export default function Sidebar() {
                         </h6>
 
                         <ul className='md:flex-col md:min-w-full flex flex-col list-none'>
-                            <li className='items-center'>
-                                <Link className={activeClassses('/bmi')} to='/bmi'>
-                                    <BsCalculatorFill className='mr-2 text-lg' /> BMI
-                                </Link>
-                            </li>
-
-                            <li className='items-center'>
-                                <Link className={activeClassses('/cicilan')} to='/cicilan'>
-                                    <FaMoneyBillWave className='mr-2 text-lg' /> Cicilan Bank
-                                </Link>
-                            </li>
-
-                            <li className='items-center'>
-                                <Link className={activeClassses('/pajak')} to='/pajak'>
-                                    <FaMoneyBillWave className='mr-2 text-lg' /> Pajak PPN
-                                </Link>
-                            </li>
+                            {links.map((link, index) => (
+                                <li key={index} className='items-center'>
+                                    <NavLink className={activeClassses(link.path)} to={link.path}>
+                                        {link.icon}
+                                        {link.name}
+                                    </NavLink>
+                                </li>
+                            ))}
                         </ul>
 
                         <hr className='my-4 md:min-w-full' />
@@ -91,15 +88,15 @@ export default function Sidebar() {
 
                         <ul className='md:flex-col md:min-w-full flex flex-col list-none md:mb-4'>
                             <li className='inline-flex'>
-                                <Link className={activeClassses('/')} to='/'>
+                                <NavLink className={activeClassses('/')} to='/'>
                                     <FaHome className='mr-2 text-lg' /> Beranda
-                                </Link>
+                                </NavLink>
                             </li>
 
                             <li className='inline-flex'>
-                                <Link className={activeClassses('/about')} to='/about'>
+                                <NavLink className={activeClassses('/about')} to='/about'>
                                     <BsFillInfoCircleFill className='mr-2 text-lg' /> Tentang
-                                </Link>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
