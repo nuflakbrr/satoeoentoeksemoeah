@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { BsFillInfoCircleFill, BsCalculatorFill } from 'react-icons/bs'
 import { AiOutlineClose } from 'react-icons/ai'
-import { FaMoneyBillWave, FaHome } from 'react-icons/fa'
+import { FaMoneyBillWave, FaHome, FaBook, FaCalendarAlt, FaShoppingCart } from 'react-icons/fa'
 
 export default function Sidebar() {
     const [collapseShow, setCollapseShow] = useState('hidden')
@@ -18,6 +18,13 @@ export default function Sidebar() {
         { path: '/bmi', name: 'BMI', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
         { path: '/cicilan', name: 'Cicilan Bank', icon: <FaMoneyBillWave className='mr-2 text-lg' /> },
         { path: '/pajak', name: 'PPN', icon: <FaMoneyBillWave className='mr-2 text-lg' /> },
+        { path: '/konversi/biner', name: 'Konversi Biner', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
+        { path: '/konversi/oktal', name: 'Konversi Oktal', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
+        { path: '/konversi/desimal', name: 'Konversi Desimal', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
+        { path: '/konversi/heksadesimal', name: 'Konversi Heksadesimal', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
+        { path: '/book', name: 'Galeri Buku', icon: <FaBook className='mr-2 text-lg' /> },
+        { path: '/environment', name: 'Hari Lingkungan Hidup', icon: <FaCalendarAlt className='mr-2 text-lg' /> },
+        { path: '/shopping', name: 'Keranjang Belanja', icon: <FaShoppingCart className='mr-2 text-lg' /> },
     ]
 
     return (
