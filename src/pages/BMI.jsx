@@ -11,11 +11,12 @@ export default function BMI() {
     const [mass, setMass] = useState(0)
     const [bmi, setBmi] = useState(0)
 
+    // LOADING
     useEffect(() => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
-        }, 2500)
+        }, 1500)
     }, [])
 
     // HANDLE POPUP
@@ -46,6 +47,8 @@ export default function BMI() {
         <>
             <SEO title='Kalkulator BMI - SATOE OENTOEK SEMOEAH' desc='Salah satu studi kasus alat hitung BMI oleh Naufal Akbar Nugroho' keyword='BMI, Kalkulator BMI' url='https://satoeoentoeksemoeah.vercel.app/bmi' />
             <div className='dark:bg-gray-900 min-h-screen lg:overflow-x-auto overflow-x-hidden'>
+                {popUpStack}
+                <Sidebar />
                 {loading ? (
                     <div className='flex justify-center items-center h-screen'>
                         <div className='w-full max-w-md'>
@@ -56,8 +59,6 @@ export default function BMI() {
                     </div>
                 ) : (
                     <>
-                        {popUpStack}
-                        <Sidebar />
                         <Chat text='Selamat datang di Kalkulator BMI! Kalkulator BMI adalah sebuah alat bantu hitung untuk menentukan apakah anda memiliki berat badan yang ideal atau bahkan obesitas. Selamat mencoba!' />
                         <div className='relative md:ml-64'>
                             <section className='text-gray-300'>
