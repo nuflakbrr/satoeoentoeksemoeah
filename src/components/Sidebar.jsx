@@ -16,12 +16,12 @@ export default function Sidebar() {
 
     const links = [
         { path: '/bmi', name: 'BMI', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
-        { path: '/cicilan', name: 'Cicilan Bank', icon: <FaMoneyBillWave className='mr-2 text-lg' /> },
-        { path: '/pajak', name: 'PPN', icon: <FaMoneyBillWave className='mr-2 text-lg' /> },
-        { path: '/konversi/biner', name: 'Konversi Biner', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
-        { path: '/konversi/oktal', name: 'Konversi Oktal', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
-        { path: '/konversi/desimal', name: 'Konversi Desimal', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
-        { path: '/konversi/heksadesimal', name: 'Konversi Heksadesimal', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
+        { path: '/credit', name: 'Cicilan Bank', icon: <FaMoneyBillWave className='mr-2 text-lg' /> },
+        { path: '/tax', name: 'PPN', icon: <FaMoneyBillWave className='mr-2 text-lg' /> },
+        { path: '/convert/biner', name: 'Konversi Biner', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
+        { path: '/convert/octal', name: 'Konversi Oktal', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
+        { path: '/convert/decimal', name: 'Konversi Desimal', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
+        { path: '/convert/hexadecimal', name: 'Konversi Heksadesimal', icon: <BsCalculatorFill className='mr-2 text-lg' /> },
         { path: '/book', name: 'Galeri Buku', icon: <FaBook className='mr-2 text-lg' /> },
         { path: '/environment', name: 'Hari Lingkungan Hidup', icon: <FaCalendarAlt className='mr-2 text-lg' /> },
         { path: '/shopping', name: 'Keranjang Belanja', icon: <FaShoppingCart className='mr-2 text-lg' /> },

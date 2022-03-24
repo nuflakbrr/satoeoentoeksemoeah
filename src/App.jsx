@@ -12,8 +12,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/bmi' element={<BMI />} />
-        <Route path='/cicilan' element={<Cicilan />} />
-        <Route path='/pajak' element={<PPN />} />
+        <Route path='/credit' element={<Cicilan />} />
+        <Route path='/tax' element={<PPN />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
