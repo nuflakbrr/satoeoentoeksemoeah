@@ -20,7 +20,7 @@ export default function BMI() {
     }
 
     const openModal = () => {
-        pushPopUp(<Modal title='Tentang Kalkulator BMI' desc='Kalkulator BMI adalah alat bantu hitung BMI (Body Mass Index). BMI sendiri adalah angka yang menjadi penilaian standar untuk menentukan apakah berat badan Anda tergolong normal, kurang, berlebih, atau obesitas.' onClose={popPopUp} />)
+        pushPopUp(<Modal title='Kalkulator BMI' desc='Kalkulator BMI adalah alat bantu hitung BMI (Body Mass Index). BMI sendiri adalah angka yang menjadi penilaian standar untuk menentukan apakah berat badan Anda tergolong normal, kurang, berlebih, atau obesitas.' onClose={popPopUp} />)
     }
 
     // CALCULATE

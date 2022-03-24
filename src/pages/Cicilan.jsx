@@ -20,7 +20,7 @@ export default function Cicilan() {
     }
 
     const openModal = () => {
-        pushPopUp(<Modal title='Tentang Kalkulator Cicilan Bank' desc='Kalkulator Cicilan Bank adalah alat bantu hitung Cicilan Bank (Kredit). Berdasarkan UU No. 10 tahun 1998, kredit bank adalah "penyediaan uang atau tagihan yang dapat dipersamakan dengan itu, berdasarkan persetujuan atau kesepakatan pinjam meminjam antara bank dengan pihak lain yang mewajibkan pihak peminjam untuk melunasi utangnya setelah jangka waktu tertentu dengan pemberian bunga".' onClose={popPopUp} />)
+        pushPopUp(<Modal title='Kalkulator Cicilan Bank' desc='Kalkulator Cicilan Bank adalah alat bantu hitung Cicilan Bank (Kredit). Dengan adanya alat bantu ini, Anda dapat menghitung angsuran yang harus dibayar apabila melakukan "peminjaman" ke Bank.' onClose={popPopUp} />)
     }
 
     // CALCULATE
@@ -83,8 +83,8 @@ export default function Cicilan() {
                                 <div className='mt-2'>
                                     {
                                         hasil > 0
-                                            ? <Alert color='bg-blue-500' icons={<BsInfoCircleFill />} result={`Hasil Akhir : Rp ${hasil}`} />
-                                            : <Alert color='bg-blue-500' icons={<BsInfoCircleFill />} result='Silahkan masukkan nominal' />
+                                            ? <Alert color='bg-blue-700' icons={<BsInfoCircleFill />} result={`Hasil Akhir : Rp ${hasil}`} />
+                                            : <Alert color='bg-blue-700' icons={<BsInfoCircleFill />} result='Silahkan masukkan nominal' />
                                     }
                                 </div>
                             </div>
