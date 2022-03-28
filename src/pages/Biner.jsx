@@ -76,7 +76,7 @@ export default function Biner() {
                                                 <input type='text' onChange={(e) => setBiner(e.target.value)} value={biner} id='nominal' className='w-full flex-1 bg-gray-white text-gray-800 placeholder-gray-400 border border-gray-300 focus:ring ring-blue-300 dark:ring-blue-500 rounded outline-none transition duration-100 px-3 py-2' required />
                                             </div>
                                             <div className='mt-2 flex flex-col'>
-                                                <label htmlFor='Diskon' className='mb-2'>Konversi</label>
+                                                <label htmlFor='Konversi' className='mb-2'>Konversi</label>
                                                 <select className='w-full flex-1 bg-gray-white text-gray-800 placeholder-gray-400 border border-gray-300 rounded outline-none transition duration-100 px-3 py-2' onChange={(e) => setOption(e.target.value)} value={option}>
                                                     <option value='oktal'>Oktal</option>
                                                     <option value='desimal'>Desimal</option>
