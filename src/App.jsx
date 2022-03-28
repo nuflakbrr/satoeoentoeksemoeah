@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import { About, Biner, BMI, Cicilan, Home, NotFound, PPN } from './pages'
+import { About, Biner, BMI, Cicilan, Home, NotFound, Oktal, PPN } from './pages'
 
 function App() {
   const [dark, setDark] = useState()
@@ -15,6 +15,7 @@ function App() {
         <Route path='/credit' element={<Cicilan />} />
         <Route path='/tax' element={<PPN />} />
         <Route path='/convert/biner' element={<Biner />} />
+        <Route path='/convert/octal' element={<Oktal />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
