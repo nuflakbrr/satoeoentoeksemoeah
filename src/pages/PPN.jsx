@@ -45,7 +45,7 @@ export default function PPN() {
 
     return (
         <>
-            <SEO title='Kalkulator PPN - SATOE OENTOEK SEMOEAH' desc='Salah satu studi kasus alat hitung PPN oleh Naufal Akbar Nugroho' keyword='PPN, Kredit, Kalkulator PPN' url='https://satoeoentoeksemoeah.vercel.app/pajak' />
+            <SEO title='Kalkulator PPN - SATOE OENTOEK SEMOEAH' desc='Salah satu studi kasus alat hitung PPN oleh Naufal Akbar Nugroho' keyword='PPN, Kredit, Kalkulator PPN' url='https://satoeoentoeksemoeah.vercel.app/tax' />
             <div className='dark:bg-gray-900 min-h-screen lg:overflow-x-auto overflow-x-hidden'>
                 {popUpStack}
                 <Sidebar />

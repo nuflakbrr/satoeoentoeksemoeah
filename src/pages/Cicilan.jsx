@@ -45,7 +45,7 @@ export default function Cicilan() {
 
     return (
         <>
-            <SEO title='Kalkulator Cicilan Bank - SATOE OENTOEK SEMOEAH' desc='Salah satu studi kasus alat hitung Cicilan Bank oleh Naufal Akbar Nugroho' keyword='Cicilan Bank, Kredit, Kalkulator Cicilan Bank' url='https://satoeoentoeksemoeah.vercel.app/cicilan' />
+            <SEO title='Kalkulator Cicilan Bank - SATOE OENTOEK SEMOEAH' desc='Salah satu studi kasus alat hitung Cicilan Bank oleh Naufal Akbar Nugroho' keyword='Cicilan Bank, Kredit, Kalkulator Cicilan Bank' url='https://satoeoentoeksemoeah.vercel.app/credit' />
             <div className='dark:bg-gray-900 min-h-screen lg:overflow-x-auto overflow-x-hidden'>
                 {popUpStack}
                 <Sidebar />
