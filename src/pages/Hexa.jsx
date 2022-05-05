@@ -11,12 +11,12 @@ export default function Hexa() {
     const [hasil, setHasil] = useState(0)
 
     // LOADING
-    // useEffect(() => {
-    //     setLoading(true)
-    //     setTimeout(() => {
-    //         setLoading(false)
-    //     }, 1500)
-    // }, [])
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        }, 1500)
+    }, [])
 
     // HANDLE POPUP
     const pushPopUp = (element) => {
