@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import { About, Biner, BMI, Cicilan, Decimal, Hexa, Home, NotFound, Oktal, PPN } from './pages'
+import { About, Biner, BMI, Cicilan, Decimal, Gallery, Hexa, Home, NotFound, Oktal, PPN } from './pages'
 
 function App() {
   const [dark, setDark] = useState()
@@ -18,6 +18,7 @@ function App() {
         <Route path='/convert/octal' element={<Oktal />} />
         <Route path='/convert/decimal' element={<Decimal />} />
         <Route path='/convert/hexadecimal' element={<Hexa />} />
+        <Route path='/book' element={<Gallery />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
