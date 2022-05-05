@@ -47,7 +47,7 @@ export default function Hexa() {
 
     return (
         <>
-            <SEO title='Kalkulator Konversi Desimal - SATOE OENTOEK SEMOEAH' desc='Salah satu studi kasus alat hitung Konversi Bilangan Desimal oleh Naufal Akbar Nugroho' keyword='Desimal, Konversi, Kalkulator Desimal' url='https://satoeoentoeksemoeah.vercel.app/convert/decimal' />
+            <SEO title='Kalkulator Konversi Heksadesimal - SATOE OENTOEK SEMOEAH' desc='Salah satu studi kasus alat hitung Konversi Bilangan Heksadesimal oleh Naufal Akbar Nugroho' keyword='Heksadesimal, Konversi, Kalkulator Heksadesimal' url='https://satoeoentoeksemoeah.vercel.app/convert/hexadecimal' />
             <div className='dark:bg-gray-900 min-h-screen lg:overflow-x-auto overflow-x-hidden'>
                 {popUpStack}
                 <Sidebar />
