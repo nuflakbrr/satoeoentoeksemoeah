@@ -128,7 +128,7 @@ export default function ShoppingCart() {
                                         <input placeholder='Coba cari disini...' onChange={(search) => searchItems(search.target.value)} className='placeholder-gray-400 border border-gray-300 focus:ring ring-blue-300 w-full py-4 px-4 rounded-lg' />
                                     </div>
                                     {
-                                        search.length > 1 && (
+                                        search.length > 1 && filteredResults.length === 0 && (
                                             <div className='px-4'>
                                                 <p className='bg-white p-4 rounded-lg text-red-500 font-bold'>
                                                     Mohon maaf, hasil pencarian tidak ditemukan.
